@@ -1,0 +1,2 @@
+create table category(id int PRIMARY KEY AUTO_INCREMENT, category_name varchar(32) unique);
+create table news(id int PRIMARY KEY AUTO_INCREMENT, category varchar(32) NOT NULL, headline varchar(100), detail_news TEXT, foreign key (category) references category(category_name));
